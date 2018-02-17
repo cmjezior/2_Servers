@@ -3,7 +3,7 @@ var http = require("http");
 
 // Define a port to listen for incoming requests
 var PORTONE = 7000;
-var PORTTWO = 7500
+var PORTTWO = 7500;
 
 // Create a generic function to handle requests and responses
 // Send the below string to the client when the user visits the PORT URL
@@ -22,12 +22,12 @@ var serverTwo = http.createServer(handleRequestTwo);
 
 // Start our server so that it can begin listening to client requests.
 // Log (server-side) when our server has started
-server.listen(PORTONE, function() {
+serverOne.listen(PORTONE, function() {
 
   console.log("Server listening on: http://localhost:" + PORTONE);
 });
 
-server.listen(PORTWO, function() {
+serverTwo.listen(PORTTWO, function() {
 
   console.log("Server listening on: http://localhost:" + PORTTWO);
 });
